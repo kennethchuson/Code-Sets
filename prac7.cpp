@@ -14,6 +14,7 @@ int main() {
     int n; 
     int make = 0; 
     int order = 0; 
+    bool key = false; 
     int ct = 0; 
     cin >> str >> n; 
 
@@ -29,6 +30,7 @@ int main() {
                         if (str[i - 1] == str[i + n]) {
                             str[i] = '$'; 
                             ct++; 
+                            key = true; 
                             ok = false; 
                         }
                         else {
@@ -43,6 +45,7 @@ int main() {
                         if (str[j + 1] == str[j - n]) {
                             str[j] = '#'; 
                             ct++; 
+                            key = true; 
                             ok = false; 
                         }
                         else {
@@ -53,7 +56,7 @@ int main() {
                 }
             }
         }
-        if (ok) {
+        if (key) {
             if (ct > 0) {
                 cout << "Possible" << endl; 
             }
