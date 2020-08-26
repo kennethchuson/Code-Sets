@@ -23,7 +23,7 @@ int main() {
         for (int i = 0; i < x; i++) {
             r = rand() % x; 
             arrMat[i][0] = r; 
-            if (arrMat[i][0] < 0) {
+            if (arrMat[i][0] > 0) {
                 ok = false; 
                 for (int j = 0; j < y; j++) {
                     r2 = (rand() % x) + (rand() % y); 
@@ -55,7 +55,7 @@ int main() {
                         enter = false; 
                     }
                 }
-            } 
+            }
         }
     }
 
